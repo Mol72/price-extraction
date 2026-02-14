@@ -73,10 +73,10 @@ def main():
     starttime = time.time()
     output = f'output.json'
     chunks = len(lines) / CHUNK
+    print("chunks: ", chunks)
     results = []
-    for i in tqdm(range(int(40)), desc= "Processing chunks: ", leave=False): 
+    for i in tqdm(range(int(400)), desc= "Processing chunks: ", leave=False): 
         document = " ".join(lines[i:CHUNK+i])
-        # prompt = f"Extract the prices of Iphones in this paragraph, give as exact list:\n\n{document}"
         prompt = f"{PROMPT} {document}"
         summary = client.generate(prompt, temperature=0.3)
         summary = summary.replace('`', '')
