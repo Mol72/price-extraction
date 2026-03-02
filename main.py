@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 PATH = f'data/content.txt'
 CHUNK = 10
-
+#adfasfd
 PROMPT = f"""
 You are a data extraction specialist. Your task is to extract iPhone price data from the following text. Your goal is to create a structured dataset optimized for direct use with the Pandas library. Specifically, you must capture the order of price appearances as a proxy for temporal evolution.
 
